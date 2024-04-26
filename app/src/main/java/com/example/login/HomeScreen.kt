@@ -32,5 +32,12 @@ fun HomeView(navController: NavHostController) {
         }) {
             Text(text = "Go To Reservations")
         }
+        Button(onClick = {
+
+                navController.navigate(Router.ParkingScreen.route)
+
+        }) {
+            Text(text = "Go To Parking List")
+        }
     }
 }

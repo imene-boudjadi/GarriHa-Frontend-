@@ -110,6 +110,21 @@ class MainActivity : ComponentActivity() {
                                 userDao.addUser(user2)
                             }
                         }
+
+                        // One-time parking data insertion (added)
+
+                            withContext(Dispatchers.IO) {
+                                val parkingDao = UserDatabase.getDatabase(context).getParkingDao()
+
+                                // Dummy parking data
+                                val parking1 = Parking(parkingName = "Parking Lot A", DescriptionParking = "This is a convenient parking lot near the main entrance.")
+                                val parking2 = Parking(parkingName = "Parking Lot B", DescriptionParking = "This parking lot offers covered parking spaces.")
+
+                                // Insert parkings into the database
+                                parkingDao.addParking(parking1)
+                                parkingDao.addParking(parking2)
+                            }
+
                     }
 
                     NavigationHost(navController = navController)

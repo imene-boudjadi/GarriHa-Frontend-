@@ -7,7 +7,9 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.example.login.AuthView
+import com.example.login.HomePView
 import com.example.login.HomeView
+import com.example.login.ParkingView
 import com.example.login.ReservationView
 
 @Composable
@@ -22,6 +24,9 @@ fun NavigationHost(navController: NavHostController) {
         }
         composable(route = Router.ReservationsScreen.route) {
             ReservationView(navController = navController)
+        }
+        composable(route = Router.ParkingScreen.route) {
+            ParkingView(navController = navController)
         }
     }
 }

@@ -8,4 +8,7 @@ import androidx.room.Query
 interface ParkingDao {
     @Query("SELECT * FROM parkings")
     fun getAllParkings(): List<Parking>
+
+    @Insert
+    fun addParking(parking: Parking)
 }

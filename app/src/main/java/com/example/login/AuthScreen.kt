@@ -42,7 +42,7 @@ fun AuthView(navController: NavHostController) {
 
 
 
-        Text(text = "Auth Screen")
+        Text(text = "Authe Screen")
         TextField(
             value = email,
             onValueChange = {

@@ -39,5 +39,12 @@ fun HomeView(navController: NavHostController) {
         }) {
             Text(text = "Go To Parking List")
         }
+        Button(onClick = {
+
+            navController.navigate(Router.SignUpScreen.route)
+
+        }) {
+            Text(text = "Create an account")
+        }
     }
 }

@@ -5,4 +5,5 @@ sealed class Router(val route: String) {
     object HomeScreen: Router("/home")
     object ReservationsScreen: Router("/reservation")
     object ParkingScreen: Router("/parking")
+    object SignUpScreen: Router("/signup")
 }

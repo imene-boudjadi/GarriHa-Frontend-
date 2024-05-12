@@ -1,5 +1,6 @@
 package com.example.parkir.views.router
 
+
 import android.content.Context
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
@@ -7,10 +8,12 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.example.login.AuthView
-import com.example.login.HomePView
+
 import com.example.login.HomeView
 import com.example.login.ParkingView
+
 import com.example.login.ReservationView
+import com.example.login.SignUpView
 
 @Composable
 fun NavigationHost(navController: NavHostController) {
@@ -27,6 +30,9 @@ fun NavigationHost(navController: NavHostController) {
         }
         composable(route = Router.ParkingScreen.route) {
             ParkingView(navController = navController)
+        }
+        composable(route = Router.SignUpScreen.route) {
+            SignUpView(navController = navController)
         }
     }
 }

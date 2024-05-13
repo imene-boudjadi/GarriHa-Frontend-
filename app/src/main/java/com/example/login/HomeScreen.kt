@@ -46,5 +46,12 @@ fun HomeView(navController: NavHostController) {
         }) {
             Text(text = "Create an account")
         }
+        Button(onClick = {
+
+            navController.navigate(Router.ReservationScreen.route)
+
+        }) {
+            Text(text = "Create a reservation")
+        }
     }
 }

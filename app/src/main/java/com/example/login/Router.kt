@@ -6,4 +6,5 @@ sealed class Router(val route: String) {
     object ReservationsScreen: Router("/reservation")
     object ParkingScreen: Router("/parking")
     object SignUpScreen: Router("/signup")
+    object ReservationScreen: Router("/createReservation")
 }

@@ -11,6 +11,7 @@ import com.example.login.AuthView
 
 import com.example.login.HomeView
 import com.example.login.ParkingView
+import com.example.login.ReservationCreateView
 
 import com.example.login.ReservationView
 import com.example.login.SignUpView
@@ -33,6 +34,9 @@ fun NavigationHost(navController: NavHostController) {
         }
         composable(route = Router.SignUpScreen.route) {
             SignUpView(navController = navController)
+        }
+        composable(route = Router.ReservationScreen.route ){
+            ReservationCreateView(navController = navController)
         }
     }
 }

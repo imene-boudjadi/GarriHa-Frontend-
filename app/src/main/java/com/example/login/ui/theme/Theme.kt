@@ -38,12 +38,15 @@ private val LightColorScheme = lightColorScheme(
 )
 
 @Composable
+
 fun LoginTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
-    // Dynamic color is available on Android 12+
     dynamicColor: Boolean = true,
     content: @Composable () -> Unit
 ) {
+    // Couleur de fond de l'application
+    val backgroundColor = Purple80
+
     val colorScheme = when {
         dynamicColor && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S -> {
             val context = LocalContext.current
@@ -65,6 +68,7 @@ fun LoginTheme(
     MaterialTheme(
         colorScheme = colorScheme,
         typography = Typography,
-        content = content
-    )
+        content = content,
+
+        )
 }

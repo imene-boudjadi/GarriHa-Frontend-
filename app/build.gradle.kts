@@ -2,6 +2,8 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id ("com.google.devtools.ksp") version "1.9.21-1.0.15"
+    id("com.google.gms.google-services")
+//    id ("com.google.gms.google-services")
 }
 
 android {
@@ -64,6 +66,13 @@ dependencies {
     implementation("androidx.navigation:navigation-runtime-ktx:2.7.7")
     implementation("androidx.room:room-common:2.6.1")
     implementation("androidx.room:room-ktx:2.6.1")
+//    implementation("androidx.compose.material3:material3-android:1.2.1")
+    implementation("androidx.lifecycle:lifecycle-common-jvm:2.8.0")
+//    implementation("com.google.firebase:firebase-auth:23.0.0")
+    implementation("com.android.support:support-annotations:28.0.0")
+    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+    implementation("androidx.appcompat:appcompat:1.6.1")
+    implementation("com.google.android.material:material:1.12.0")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
@@ -93,4 +102,47 @@ dependencies {
     testImplementation ("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.4.2")
     //MockWebserver
     testImplementation ("com.squareup.okhttp3:mockwebserver:4.9.1")
+
+    implementation ("com.maxkeppeler.sheets-compose-dialogs:core:1.0.2")
+
+    implementation ("com.maxkeppeler.sheets-compose-dialogs:calendar:1.0.2")
+
+    implementation ("com.maxkeppeler.sheets-compose-dialogs:clock:1.0.2")
+    implementation ("com.google.zxing:core:3.5.2")
+
+    // google map
+    implementation ("com.google.android.gms:play-services-maps:18.0.2")
+    implementation ("com.google.maps.android:android-maps-utils:2.2.3")
+
+    // icons
+    implementation ("androidx.compose.material:material-icons-extended:1.0.0")
+
+    // connexion gmail
+//    implementation("com.google.firebase:firebase-auth-ktx:21.0.1")
+    implementation (platform("com.google.firebase:firebase-bom:31.5.0"))
+    implementation ("com.google.firebase:firebase-auth-ktx")
+    implementation ("com.google.android.gms:play-services-auth:20.5.0")
+
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1")
+    implementation ("androidx.lifecycle:lifecycle-livedata-ktx:2.6.1")
+
+    // photo
+    implementation ("com.google.accompanist:accompanist-permissions:0.23.1")
+
+    // QR Code
+    implementation("com.lightspark:compose-qr-code:1.0.1")
+
+//    implementation "androidx.lifecycle:lifecycle-viewmodel-compose:2.6.0"
+//    implementation ("androidx.lifecycle:lifecycle-runtime-compose:2.6.0")
+//
+//    implementation ("com.google.dagger:hilt-android:2.44")
+////    kapt ("com.google.dagger:hilt-compiler:2.44")
+//    implementation ("androidx.hilt:hilt-navigation-compose:1.0.0")
+
+    implementation ("androidx.navigation:navigation-compose:2.4.0-alpha10") // Check for the latest version
+    implementation ("androidx.compose.material:material:1.0.5") // Check for the latest version
+    implementation ("androidx.compose.ui:ui:1.0.5") // Check for the latest version
+    implementation ("androidx.compose.runtime:runtime:1.0.5") // Check for the latest version
+
 }
+

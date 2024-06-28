@@ -1,7 +1,6 @@
 package com.example.login
 
 
-import android.service.autofill.UserData
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -10,10 +9,9 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.modifier.modifierLocalConsumer
-import androidx.navigation.NavController
 import androidx.navigation.NavHostController
 import com.example.parkir.views.router.Router
+
 
 @Composable
 fun HomeView(navController: NavHostController) {
@@ -45,6 +43,52 @@ fun HomeView(navController: NavHostController) {
 
         }) {
             Text(text = "Create an account")
+        }
+        Button(onClick = {
+
+            navController.navigate(Router.MapScreen.route)
+
+        }) {
+            Text(text = "Go to the map")
+        }
+
+        Button(onClick = {
+
+            navController.navigate(Router.DisplayStoredImage.route)
+
+        }) {
+            Text(text = "Go to Profil")
+        }
+
+        Button(onClick = {
+
+            navController.navigate(Router.ReservationScreen.route)
+
+        }) {
+            Text(text = "Create a reservation")
+        }
+
+        Button(onClick = {
+
+            navController.navigate(Router.ReservationScreen2.route)
+
+        }) {
+            Text(text = "Create a reservation 2 ")
+        }
+        Button(onClick = {
+
+            navController.navigate(Router.ReservationsList.route)
+
+        }) {
+            Text(text = "Liste Reservations")
+        }
+
+        Button(onClick = {
+
+            navController.navigate(Router.Home.route)
+
+        }) {
+            Text(text = "Go to page Home")
         }
     }
 }
